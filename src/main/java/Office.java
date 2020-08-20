@@ -12,4 +12,11 @@ public class Office {
     public void setAddress(String address) {
         this.address = address;
     }
+
+    @Override
+    public String toString() {
+        return "Office{" +
+                "address='" + address + '\'' +
+                '}';
+    }
 }

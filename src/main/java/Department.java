@@ -8,7 +8,8 @@ public class Department {
 
     public Department(String name) {
         this.name = name;
-        employees = new ArrayList<Employee>();
+        employees = new ArrayList<>();
+        offices = new ArrayList<>();
     }
 
     public String getName() {
@@ -48,13 +49,20 @@ public class Department {
         this.employees = employees;
     }
 
-    public void informacionDepartamento(){
-        System.out.println("ManagedBy: "+this.managedBy.toString());
-        for (int i = 0; i < employees.size(); i++) {
-            System.out.println("Empleadosweñpdfwsdjñpm");//Aqui perdi la paciencia
-            employees.get(i);
+    public void imprimirDepartamento(){
+        System.out.println("\nDepartment: "+getName());
+        System.out.println("    ManagedBy: "+this.managedBy.toString());
+        System.out.println("    Empleados: ");
+        for (Employee employee : employees) {
+
+            System.out.println("        " + employee.toString());
         }
-        System.out.println();
+        System.out.println("    Oficinas: ");
+        for (Office office : offices) {
+            System.out.println("        " + office.toString());
+
+        }
+
     }
 
 }

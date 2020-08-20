@@ -3,7 +3,8 @@ import java.util.ArrayList;
 public class MenuCompany {
     public static void main(String[] args) {
     /* Creando los empleados */
-
+        Company compania = createCompany();
+        showCompany(compania);
     }
     public static Company createCompany(){
         Company PalCompany = new Company("PalCompany S.A.");
@@ -64,9 +65,7 @@ public class MenuCompany {
         System.out.println("Compañia: "+company.getName());
         for (int i = 0; i < departments.size(); i++) {
             Department departament = departments.get(i);
-            System.out.println("Departamento de "+departament.getName());
-            System.out.println("Dirigo por: "+departament.getManagedBy());
-            ArrayList<Employee> employees = departament.getEmployees();
+            departament.imprimirDepartamento();
         }
     }
 }

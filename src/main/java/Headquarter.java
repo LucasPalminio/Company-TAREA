@@ -3,4 +3,10 @@ public class Headquarter extends Office{
         super(address);
     }
 
+    @Override
+    public String toString() {
+        return "Headquarter{" +
+                "address='" + super.getAddress() + '\'' +
+                '}';
+    }
 }
